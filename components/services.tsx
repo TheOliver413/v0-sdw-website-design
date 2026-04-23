@@ -1,6 +1,7 @@
 "use client"
 
-import { motion } from "framer-motion"
+import { useState } from "react"
+import { motion, AnimatePresence } from "framer-motion"
 import { 
   Code2, 
   Smartphone, 
@@ -8,72 +9,103 @@ import {
   Cloud, 
   Cog, 
   BarChart3,
-  ArrowRight 
+  FileText,
+  Shield,
+  Zap,
+  Layers,
+  RefreshCw,
+  MonitorSmartphone
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
-const services = [
+const categories = [
   {
-    icon: Code2,
-    title: "Desarrollo Web",
-    description: "Aplicaciones web modernas y escalables con las ultimas tecnologias. Interfaces intuitivas y experiencias de usuario excepcionales.",
-    features: ["React / Next.js", "APIs REST", "Bases de datos"],
+    id: "desarrollo",
+    name: "Desarrollo de Software",
+    services: [
+      {
+        icon: Code2,
+        title: "Desarrollo Web",
+        description: "Aplicaciones web modernas y escalables con tecnologias como React, Next.js, Angular y .NET. Interfaces intuitivas y experiencias de usuario excepcionales.",
+      },
+      {
+        icon: Smartphone,
+        title: "Apps Moviles",
+        description: "Aplicaciones nativas e hibridas para iOS y Android. Diseño centrado en el usuario con alto rendimiento y sincronizacion en tiempo real.",
+      },
+      {
+        icon: Database,
+        title: "Sistemas a la Medida",
+        description: "Software personalizado que se adapta a los procesos unicos de tu empresa. Desde ERPs hasta sistemas de gestion especializados.",
+      },
+      {
+        icon: Layers,
+        title: "APIs e Integraciones",
+        description: "Conectamos tus sistemas existentes con nuevas plataformas. APIs REST robustas y documentadas para una integracion perfecta.",
+      },
+    ],
   },
   {
-    icon: Smartphone,
-    title: "Apps Moviles",
-    description: "Aplicaciones nativas e hibridas para iOS y Android. Diseño centrado en el usuario con alto rendimiento.",
-    features: ["iOS & Android", "React Native", "Flutter"],
+    id: "infraestructura",
+    name: "Infraestructura",
+    services: [
+      {
+        icon: Cloud,
+        title: "Soluciones Cloud",
+        description: "Migracion y gestion de infraestructura en AWS, Azure o Google Cloud. Escalabilidad, seguridad y disponibilidad garantizadas.",
+      },
+      {
+        icon: Shield,
+        title: "Seguridad Informatica",
+        description: "Proteccion de datos y sistemas criticos. Auditorias de seguridad, implementacion de protocolos y monitoreo continuo.",
+      },
+      {
+        icon: RefreshCw,
+        title: "DevOps & CI/CD",
+        description: "Automatizacion de despliegues y gestion de infraestructura como codigo. Entregas continuas y ambientes consistentes.",
+      },
+      {
+        icon: MonitorSmartphone,
+        title: "Soporte y Mantenimiento",
+        description: "Soporte tecnico 24/7 para tus sistemas. Actualizaciones, optimizacion de rendimiento y resolucion de incidentes.",
+      },
+    ],
   },
   {
-    icon: Database,
-    title: "Sistemas ERP",
-    description: "Sistemas empresariales integrados que optimizan todos los procesos de tu organizacion en una sola plataforma.",
-    features: ["Gestion integral", "Reportes", "Automatizacion"],
-  },
-  {
-    icon: Cloud,
-    title: "Soluciones Cloud",
-    description: "Migracion y gestion de infraestructura en la nube. Escalabilidad, seguridad y disponibilidad garantizadas.",
-    features: ["AWS / Azure", "DevOps", "Seguridad"],
-  },
-  {
-    icon: Cog,
-    title: "Automatizacion",
-    description: "Automatiza procesos repetitivos y optimiza la eficiencia operativa de tu empresa con soluciones inteligentes.",
-    features: ["RPA", "Workflows", "Integraciones"],
-  },
-  {
-    icon: BarChart3,
-    title: "Business Intelligence",
-    description: "Transforma tus datos en decisiones estrategicas con dashboards interactivos y analisis predictivo.",
-    features: ["Dashboards", "KPIs", "Analytics"],
+    id: "consultoria",
+    name: "Consultoria",
+    services: [
+      {
+        icon: Cog,
+        title: "Automatizacion de Procesos",
+        description: "Identificamos y automatizamos procesos repetitivos para aumentar la eficiencia operativa de tu empresa.",
+      },
+      {
+        icon: BarChart3,
+        title: "Business Intelligence",
+        description: "Transforma tus datos en decisiones estrategicas con dashboards interactivos y analisis predictivo.",
+      },
+      {
+        icon: FileText,
+        title: "Transformacion Digital",
+        description: "Acompañamiento integral en la digitalizacion de tu empresa. Desde el diagnostico hasta la implementacion.",
+      },
+      {
+        icon: Zap,
+        title: "Optimizacion de Procesos",
+        description: "Analizamos tus flujos de trabajo actuales y proponemos mejoras basadas en tecnologia y mejores practicas.",
+      },
+    ],
   },
 ]
 
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-    },
-  },
-}
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.6 },
-  },
-}
-
 export function Services() {
+  const [activeCategory, setActiveCategory] = useState("desarrollo")
+  const activeData = categories.find(c => c.id === activeCategory)
+
   return (
     <section id="servicios" className="py-24 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-card/30 to-background pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-card/20 to-background pointer-events-none" />
       
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
@@ -81,68 +113,72 @@ export function Services() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-12"
         >
           <span className="inline-block px-4 py-1.5 rounded-full glass-card text-sm text-accent mb-4">
-            Nuestros Servicios
+            Que hacemos
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-            Soluciones <span className="text-gradient">Tecnologicas</span> Integrales
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-balance">
+            Que es <span className="text-gradient">SDW</span>?
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto text-pretty">
-            Ofrecemos un portafolio completo de servicios tecnologicos para impulsar 
-            la transformacion digital de tu empresa.
+          <p className="text-muted-foreground text-lg max-w-3xl mx-auto text-pretty">
+            SDW es tu aliado estrategico en tecnologia. Somos la empresa donde podras 
+            desarrollar sistemas de informacion a la medida, automatizar procesos y 
+            llevar tu empresa al siguiente nivel. Todo esto, en un solo lugar.
           </p>
         </motion.div>
 
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
-        >
-          {services.map((service) => (
-            <motion.div
-              key={service.title}
-              variants={itemVariants}
-              className="group relative"
+        <div className="flex flex-wrap justify-center gap-2 mb-12">
+          {categories.map((category) => (
+            <Button
+              key={category.id}
+              variant={activeCategory === category.id ? "default" : "outline"}
+              onClick={() => setActiveCategory(category.id)}
+              className={
+                activeCategory === category.id
+                  ? "bg-gradient-to-r from-primary to-secondary text-white border-0"
+                  : "border-border hover:border-primary/50 hover:bg-primary/10"
+              }
             >
-              <div className="glass-card rounded-2xl p-8 h-full transition-all duration-500 hover:bg-card/60 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/10">
-                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <service.icon className="w-7 h-7 text-white" />
-                </div>
-                
-                <h3 className="text-xl font-semibold mb-3 text-foreground group-hover:text-primary transition-colors">
-                  {service.title}
-                </h3>
-                
-                <p className="text-muted-foreground mb-6 text-pretty">
-                  {service.description}
-                </p>
-                
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {service.features.map((feature) => (
-                    <span
-                      key={feature}
-                      className="px-3 py-1 text-xs rounded-full bg-muted text-muted-foreground"
-                    >
-                      {feature}
-                    </span>
-                  ))}
-                </div>
-                
-                <Button
-                  variant="ghost"
-                  className="p-0 h-auto text-primary hover:text-accent group/btn"
-                >
-                  Saber mas
-                  <ArrowRight className="ml-1 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-                </Button>
-              </div>
-            </motion.div>
+              {category.name}
+            </Button>
           ))}
-        </motion.div>
+        </div>
+
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={activeCategory}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3 }}
+            className="grid md:grid-cols-2 gap-6"
+          >
+            {activeData?.services.map((service, index) => (
+              <motion.div
+                key={service.title}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                className="glass-card rounded-2xl p-8 group hover:bg-card/60 hover:border-primary/30 transition-all duration-300"
+              >
+                <div className="flex gap-5">
+                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center flex-shrink-0 group-hover:from-primary group-hover:to-secondary transition-all duration-300">
+                    <service.icon className="w-7 h-7 text-primary group-hover:text-white transition-colors" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold mb-2 text-foreground group-hover:text-primary transition-colors">
+                      {service.title}
+                    </h3>
+                    <p className="text-muted-foreground text-pretty leading-relaxed">
+                      {service.description}
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </AnimatePresence>
       </div>
     </section>
   )

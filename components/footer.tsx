@@ -21,7 +21,7 @@ const footerLinks = {
   recursos: [
     { label: "Documentacion", href: "#" },
     { label: "Casos de Exito", href: "#" },
-    { label: "FAQ", href: "#" },
+    { label: "FAQ", href: "#faq" },
     { label: "Soporte", href: "#" },
     { label: "Politica de Privacidad", href: "#" },
   ],
