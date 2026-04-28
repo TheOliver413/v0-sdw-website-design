@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SDW - Soluciones Digitales Web | Desarrollo Web Profesional</title>
-    <meta name="description" content="Transformamos ideas en experiencias digitales excepcionales. Desarrollo web, aplicaciones móviles y soluciones tecnológicas innovadoras.">
+    <title>SDW - Soluciones Tecnologicas</title>
+    <meta name="description" content="SDW es tu aliado en la transformacion digital. Desarrollamos sistemas de informacion a la medida que optimizan la logistica y los procesos empresariales.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -41,98 +41,179 @@
 
     <!-- Header -->
     <header class="header" id="header">
-        <div class="container header-container">
-            <a href="#" class="logo">
-                <span class="logo-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                        <polyline points="2 17 12 22 22 17"></polyline>
-                        <polyline points="2 12 12 17 22 12"></polyline>
+        <div class="container">
+            <div class="header-content">
+                <a href="#inicio" class="logo">
+                    <div class="logo-icon">
+                        <svg viewBox="0 0 40 40" width="32" height="32">
+                            <circle cx="20" cy="12" r="6" fill="currentColor" opacity="0.9"/>
+                            <circle cx="20" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M8 35 L20 20 L32 35" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="20" cy="20" r="2" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <div class="logo-text">
+                        <span class="logo-name">SDW</span>
+                        <span class="logo-tagline">Soluciones Tecnologicas</span>
+                    </div>
+                </a>
+
+                <nav class="nav-desktop">
+                    <a href="#inicio" class="nav-link">Inicio</a>
+                    <a href="#servicios" class="nav-link">Servicios</a>
+                    <a href="#nosotros" class="nav-link">Nosotros</a>
+                    <a href="#faq" class="nav-link">FAQ</a>
+                    <a href="#contacto" class="nav-link">Contacto</a>
+                </nav>
+
+                <div class="header-actions">
+                    <a href="#" class="btn btn-outline">Iniciar Sesion</a>
+                    <a href="#contacto" class="btn btn-primary">Contactanos</a>
+                </div>
+
+                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Abrir menu">
+                    <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
                     </svg>
-                </span>
-                <span class="logo-text">SDW</span>
-            </a>
-            
-            <nav class="nav" id="nav">
-                <a href="#inicio" class="nav-link">Inicio</a>
-                <a href="#servicios" class="nav-link">Servicios</a>
-                <a href="#nosotros" class="nav-link">Nosotros</a>
-                <a href="#clientes" class="nav-link">Clientes</a>
-                <a href="#faq" class="nav-link">FAQ</a>
-                <a href="#contacto" class="nav-link">Contacto</a>
-            </nav>
+                    <svg class="close-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
 
-            <a href="#contacto" class="btn btn-primary header-cta">Comenzar Proyecto</a>
-
-            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Abrir menú">
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-            </button>
-        </div>
-
-        <!-- Mobile Menu -->
-        <div class="mobile-menu" id="mobile-menu">
-            <nav class="mobile-nav">
-                <a href="#inicio" class="mobile-nav-link">Inicio</a>
-                <a href="#servicios" class="mobile-nav-link">Servicios</a>
-                <a href="#nosotros" class="mobile-nav-link">Nosotros</a>
-                <a href="#clientes" class="mobile-nav-link">Clientes</a>
-                <a href="#faq" class="mobile-nav-link">FAQ</a>
-                <a href="#contacto" class="mobile-nav-link">Contacto</a>
-                <a href="#contacto" class="btn btn-primary mobile-cta">Comenzar Proyecto</a>
+            <nav class="nav-mobile" id="nav-mobile">
+                <a href="#inicio" class="nav-link-mobile">Inicio</a>
+                <a href="#servicios" class="nav-link-mobile">Servicios</a>
+                <a href="#nosotros" class="nav-link-mobile">Nosotros</a>
+                <a href="#faq" class="nav-link-mobile">FAQ</a>
+                <a href="#contacto" class="nav-link-mobile">Contacto</a>
+                <div class="mobile-actions">
+                    <a href="#" class="btn btn-outline btn-block">Iniciar Sesion</a>
+                    <a href="#contacto" class="btn btn-primary btn-block">Contactanos</a>
+                </div>
             </nav>
         </div>
     </header>
 
     <main>
         <!-- Hero Section -->
-        <section class="hero" id="inicio">
-            <div class="container hero-container">
-                <div class="hero-badge">
-                    <span class="badge-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-                        </svg>
-                    </span>
-                    Innovación Digital
-                </div>
-                
-                <h1 class="hero-title">
-                    Transformamos Ideas en
-                    <span class="gradient-text">Experiencias Digitales</span>
-                </h1>
-                
-                <p class="hero-description">
-                    Desarrollamos soluciones web innovadoras que impulsan tu negocio al siguiente nivel. 
-                    Tecnología de vanguardia, diseño excepcional y resultados medibles.
-                </p>
-                
-                <div class="hero-buttons">
-                    <a href="#contacto" class="btn btn-primary btn-lg">
-                        Iniciar Proyecto
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                            <polyline points="12 5 19 12 12 19"></polyline>
-                        </svg>
-                    </a>
-                    <a href="#servicios" class="btn btn-outline btn-lg">
-                        Ver Servicios
-                    </a>
-                </div>
+        <section id="inicio" class="hero">
+            <div class="hero-bg-gradient"></div>
+            <div class="hero-glow hero-glow-left"></div>
+            <div class="hero-glow hero-glow-right"></div>
+            
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-content fade-in">
+                        <h1 class="hero-title">
+                            <span>Soluciones</span>
+                            <span class="text-gradient">Tecnologicas</span>
+                            <span>para tu Empresa</span>
+                        </h1>
+                        
+                        <p class="hero-description">
+                            SDW es tu aliado en la transformacion digital. Desarrollamos sistemas 
+                            de informacion a la medida que optimizan la logistica y los procesos 
+                            empresariales, todo desde una sola plataforma.
+                        </p>
 
-                <div class="hero-stats">
-                    <div class="hero-stat">
-                        <span class="hero-stat-number">150+</span>
-                        <span class="hero-stat-label">Proyectos</span>
+                        <div class="hero-stats-list">
+                            <div class="hero-stat-item">
+                                <div class="hero-stat-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polyline points="12 6 12 12 16 14"></polyline>
+                                    </svg>
+                                </div>
+                                <span>Tiempo de respuesta: 1 minuto</span>
+                            </div>
+                            <div class="hero-stat-item">
+                                <div class="hero-stat-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="9" cy="7" r="4"></circle>
+                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                    </svg>
+                                </div>
+                                <span>Mas de 50 clientes satisfechos</span>
+                            </div>
+                            <div class="hero-stat-item">
+                                <div class="hero-stat-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                                        <polyline points="17 6 23 6 23 12"></polyline>
+                                    </svg>
+                                </div>
+                                <span>Ahorra 60% en procesos manuales</span>
+                            </div>
+                        </div>
+
+                        <div class="hero-badges">
+                            <div class="hero-badge">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-success">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                </svg>
+                                <span>Sin compromisos</span>
+                            </div>
+                            <div class="hero-badge">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-success">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                </svg>
+                                <span>Asesoria gratuita</span>
+                            </div>
+                            <div class="hero-badge">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-success">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                </svg>
+                                <span>Respuesta en 24h</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="hero-stat">
-                        <span class="hero-stat-number">50+</span>
-                        <span class="hero-stat-label">Clientes</span>
-                    </div>
-                    <div class="hero-stat">
-                        <span class="hero-stat-number">5+</span>
-                        <span class="hero-stat-label">Años</span>
+
+                    <div class="hero-form-wrapper fade-in">
+                        <div class="hero-form-card glass-card">
+                            <div class="hero-form-header">
+                                <h2>Agenda una Llamada</h2>
+                                <p>Dejanos tus datos y nos pondremos en contacto contigo</p>
+                            </div>
+
+                            <form id="hero-form" class="hero-form">
+                                <div class="form-group">
+                                    <label>Nombre completo *</label>
+                                    <input type="text" placeholder="Tu nombre" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Email corporativo *</label>
+                                    <input type="email" placeholder="tu@empresa.com" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Telefono *</label>
+                                    <input type="tel" placeholder="+57 300 123 4567" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Empresa</label>
+                                    <input type="text" placeholder="Nombre de tu empresa">
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block">
+                                    Agendar Llamada
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                                    </svg>
+                                </button>
+                            </form>
+
+                            <p class="hero-form-disclaimer">
+                                Al enviar este formulario aceptas nuestra politica de privacidad
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -141,513 +222,746 @@
         <!-- Trusted By Section -->
         <section class="trusted-by">
             <div class="container">
-                <p class="trusted-by-text">Empresas que confían en nosotros</p>
-                <div class="trusted-logos">
-                    <div class="trusted-logo">TechCorp</div>
-                    <div class="trusted-logo">InnovateLab</div>
-                    <div class="trusted-logo">DigitalFirst</div>
-                    <div class="trusted-logo">CloudSystems</div>
-                    <div class="trusted-logo">DataFlow</div>
+                <p class="trusted-by-title">Ellos ya confian en nosotros:</p>
+                <div class="trusted-by-logos">
+                    <div class="trusted-by-track">
+                        <span class="trusted-logo">LogiCorp</span>
+                        <span class="trusted-logo">TechStart</span>
+                        <span class="trusted-logo">Distribuidora Nacional</span>
+                        <span class="trusted-logo">CloudMax</span>
+                        <span class="trusted-logo">InnovateTech</span>
+                        <span class="trusted-logo">DataPro</span>
+                        <span class="trusted-logo">LogiCorp</span>
+                        <span class="trusted-logo">TechStart</span>
+                        <span class="trusted-logo">Distribuidora Nacional</span>
+                        <span class="trusted-logo">CloudMax</span>
+                        <span class="trusted-logo">InnovateTech</span>
+                        <span class="trusted-logo">DataPro</span>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Services Section -->
-        <section class="services" id="servicios">
+        <section id="servicios" class="services section-reveal">
+            <div class="services-bg"></div>
             <div class="container">
                 <div class="section-header">
-                    <span class="section-badge">Nuestros Servicios</span>
-                    <h2 class="section-title">Soluciones Digitales Completas</h2>
+                    <span class="section-badge glass-card">Que hacemos</span>
+                    <h2 class="section-title">Que es <span class="text-gradient">SDW</span>?</h2>
                     <p class="section-description">
-                        Ofrecemos un amplio rango de servicios tecnológicos diseñados para impulsar tu negocio en la era digital.
+                        SDW es tu aliado estrategico en tecnologia. Somos la empresa donde podras 
+                        desarrollar sistemas de informacion a la medida, automatizar procesos y 
+                        llevar tu empresa al siguiente nivel. Todo esto, en un solo lugar.
                     </p>
                 </div>
 
-                <div class="services-grid">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <polyline points="16 18 22 12 16 6"></polyline>
-                                <polyline points="8 6 2 12 8 18"></polyline>
-                            </svg>
-                        </div>
-                        <h3 class="service-title">Desarrollo Web</h3>
-                        <p class="service-description">
-                            Sitios web modernos, responsivos y optimizados para SEO que convierten visitantes en clientes.
-                        </p>
-                        <ul class="service-features">
-                            <li>Landing Pages</li>
-                            <li>E-commerce</li>
-                            <li>Aplicaciones Web</li>
-                        </ul>
-                    </div>
-
-                    <div class="service-card featured">
-                        <div class="featured-badge">Popular</div>
-                        <div class="service-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
-                                <line x1="12" y1="18" x2="12.01" y2="18"></line>
-                            </svg>
-                        </div>
-                        <h3 class="service-title">Apps Móviles</h3>
-                        <p class="service-description">
-                            Aplicaciones nativas e híbridas para iOS y Android con experiencias de usuario excepcionales.
-                        </p>
-                        <ul class="service-features">
-                            <li>iOS & Android</li>
-                            <li>React Native</li>
-                            <li>Flutter</li>
-                        </ul>
-                    </div>
-
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
-                                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
-                                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
-                            </svg>
-                        </div>
-                        <h3 class="service-title">Backend & APIs</h3>
-                        <p class="service-description">
-                            Arquitecturas robustas y escalables que potencian tus aplicaciones y servicios digitales.
-                        </p>
-                        <ul class="service-features">
-                            <li>APIs RESTful</li>
-                            <li>Microservicios</li>
-                            <li>Cloud Computing</li>
-                        </ul>
-                    </div>
-
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
-                                <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
-                                <path d="M2 2l7.586 7.586"></path>
-                                <circle cx="11" cy="11" r="2"></circle>
-                            </svg>
-                        </div>
-                        <h3 class="service-title">UI/UX Design</h3>
-                        <p class="service-description">
-                            Diseños intuitivos y atractivos que mejoran la experiencia del usuario y aumentan conversiones.
-                        </p>
-                        <ul class="service-features">
-                            <li>Wireframing</li>
-                            <li>Prototipos</li>
-                            <li>Design Systems</li>
-                        </ul>
-                    </div>
-
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="service-title">Integraciones</h3>
-                        <p class="service-description">
-                            Conectamos tus sistemas y herramientas para automatizar procesos y mejorar la eficiencia.
-                        </p>
-                        <ul class="service-features">
-                            <li>CRM Integration</li>
-                            <li>Payment Gateways</li>
-                            <li>Third-party APIs</li>
-                        </ul>
-                    </div>
-
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="service-title">Seguridad</h3>
-                        <p class="service-description">
-                            Protegemos tus aplicaciones y datos con las mejores prácticas de seguridad informática.
-                        </p>
-                        <ul class="service-features">
-                            <li>Auditorías</li>
-                            <li>SSL/TLS</li>
-                            <li>Encriptación</li>
-                        </ul>
-                    </div>
+                <div class="services-tabs">
+                    <button class="tab-btn active" data-tab="desarrollo">Desarrollo de Software</button>
+                    <button class="tab-btn" data-tab="infraestructura">Infraestructura</button>
+                    <button class="tab-btn" data-tab="consultoria">Consultoria</button>
                 </div>
-            </div>
-        </section>
 
-        <!-- Stats Section -->
-        <section class="stats">
-            <div class="container">
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <span class="stat-number" data-target="150">0</span>
-                        <span class="stat-label">Proyectos Completados</span>
+                <div class="services-content">
+                    <!-- Desarrollo de Software -->
+                    <div class="tab-content active" id="tab-desarrollo">
+                        <div class="services-grid">
+                            <div class="service-card glass-card">
+                                <div class="service-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="16 18 22 12 16 6"></polyline>
+                                        <polyline points="8 6 2 12 8 18"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="service-content">
+                                    <h3>Desarrollo Web</h3>
+                                    <p>Aplicaciones web modernas y escalables con tecnologias como React, Next.js, Angular y .NET. Interfaces intuitivas y experiencias de usuario excepcionales.</p>
+                                </div>
+                            </div>
+                            <div class="service-card glass-card">
+                                <div class="service-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                                        <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                                    </svg>
+                                </div>
+                                <div class="service-content">
+                                    <h3>Apps Moviles</h3>
+                                    <p>Aplicaciones nativas e hibridas para iOS y Android. Diseno centrado en el usuario con alto rendimiento y sincronizacion en tiempo real.</p>
+                                </div>
+                            </div>
+                            <div class="service-card glass-card">
+                                <div class="service-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                                        <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                                        <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                                    </svg>
+                                </div>
+                                <div class="service-content">
+                                    <h3>Sistemas a la Medida</h3>
+                                    <p>Software personalizado que se adapta a los procesos unicos de tu empresa. Desde ERPs hasta sistemas de gestion especializados.</p>
+                                </div>
+                            </div>
+                            <div class="service-card glass-card">
+                                <div class="service-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                                        <polyline points="2 17 12 22 22 17"></polyline>
+                                        <polyline points="2 12 12 17 22 12"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="service-content">
+                                    <h3>APIs e Integraciones</h3>
+                                    <p>Conectamos tus sistemas existentes con nuevas plataformas. APIs REST robustas y documentadas para una integracion perfecta.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="stat-item">
-                        <span class="stat-number" data-target="50">0</span>
-                        <span class="stat-label">Clientes Satisfechos</span>
+
+                    <!-- Infraestructura -->
+                    <div class="tab-content" id="tab-infraestructura">
+                        <div class="services-grid">
+                            <div class="service-card glass-card">
+                                <div class="service-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+                                    </svg>
+                                </div>
+                                <div class="service-content">
+                                    <h3>Soluciones Cloud</h3>
+                                    <p>Migracion y gestion de infraestructura en AWS, Azure o Google Cloud. Escalabilidad, seguridad y disponibilidad garantizadas.</p>
+                                </div>
+                            </div>
+                            <div class="service-card glass-card">
+                                <div class="service-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                    </svg>
+                                </div>
+                                <div class="service-content">
+                                    <h3>Seguridad Informatica</h3>
+                                    <p>Proteccion de datos y sistemas criticos. Auditorias de seguridad, implementacion de protocolos y monitoreo continuo.</p>
+                                </div>
+                            </div>
+                            <div class="service-card glass-card">
+                                <div class="service-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="23 4 23 10 17 10"></polyline>
+                                        <polyline points="1 20 1 14 7 14"></polyline>
+                                        <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+                                    </svg>
+                                </div>
+                                <div class="service-content">
+                                    <h3>DevOps & CI/CD</h3>
+                                    <p>Automatizacion de despliegues y gestion de infraestructura como codigo. Entregas continuas y ambientes consistentes.</p>
+                                </div>
+                            </div>
+                            <div class="service-card glass-card">
+                                <div class="service-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                        <line x1="8" y1="21" x2="16" y2="21"></line>
+                                        <line x1="12" y1="17" x2="12" y2="21"></line>
+                                    </svg>
+                                </div>
+                                <div class="service-content">
+                                    <h3>Soporte y Mantenimiento</h3>
+                                    <p>Soporte tecnico 24/7 para tus sistemas. Actualizaciones, optimizacion de rendimiento y resolucion de incidentes.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="stat-item">
-                        <span class="stat-number" data-target="5">0</span>
-                        <span class="stat-label">Años de Experiencia</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number" data-target="99">0</span>
-                        <span class="stat-label">% Satisfacción</span>
+
+                    <!-- Consultoria -->
+                    <div class="tab-content" id="tab-consultoria">
+                        <div class="services-grid">
+                            <div class="service-card glass-card">
+                                <div class="service-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="3"></circle>
+                                        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                                    </svg>
+                                </div>
+                                <div class="service-content">
+                                    <h3>Automatizacion de Procesos</h3>
+                                    <p>Identificamos y automatizamos procesos repetitivos para aumentar la eficiencia operativa de tu empresa.</p>
+                                </div>
+                            </div>
+                            <div class="service-card glass-card">
+                                <div class="service-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <line x1="18" y1="20" x2="18" y2="10"></line>
+                                        <line x1="12" y1="20" x2="12" y2="4"></line>
+                                        <line x1="6" y1="20" x2="6" y2="14"></line>
+                                    </svg>
+                                </div>
+                                <div class="service-content">
+                                    <h3>Business Intelligence</h3>
+                                    <p>Transforma tus datos en decisiones estrategicas con dashboards interactivos y analisis predictivo.</p>
+                                </div>
+                            </div>
+                            <div class="service-card glass-card">
+                                <div class="service-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                        <polyline points="14 2 14 8 20 8"></polyline>
+                                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                                        <polyline points="10 9 9 9 8 9"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="service-content">
+                                    <h3>Transformacion Digital</h3>
+                                    <p>Acompanamiento integral en la digitalizacion de tu empresa. Desde el diagnostico hasta la implementacion.</p>
+                                </div>
+                            </div>
+                            <div class="service-card glass-card">
+                                <div class="service-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                                    </svg>
+                                </div>
+                                <div class="service-content">
+                                    <h3>Optimizacion de Procesos</h3>
+                                    <p>Analizamos tus flujos de trabajo actuales y proponemos mejoras basadas en tecnologia y mejores practicas.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- About Section -->
-        <section class="about" id="nosotros">
+        <section id="nosotros" class="about section-reveal">
+            <div class="about-glow about-glow-left"></div>
+            <div class="about-glow about-glow-right"></div>
+            
             <div class="container">
                 <div class="about-grid">
                     <div class="about-content">
-                        <span class="section-badge">Sobre Nosotros</span>
-                        <h2 class="section-title">Pasión por la Tecnología y la Innovación</h2>
+                        <span class="section-badge glass-card">Sobre Nosotros</span>
+                        <h2 class="section-title">Tecnologia que <span class="text-gradient">Optimiza</span> tu Negocio</h2>
                         <p class="about-text">
-                            Somos un equipo de profesionales apasionados por crear soluciones digitales que marquen la diferencia. 
-                            Con más de 5 años de experiencia, hemos ayudado a empresas de todos los tamaños a alcanzar sus objetivos digitales.
+                            En <strong>SDW Soluciones Tecnologicas</strong> somos 
+                            una empresa colombiana dedicada al desarrollo de software empresarial. 
+                            Nos especializamos en crear soluciones a la medida que transforman 
+                            la manera en que las empresas operan y crecen.
                         </p>
                         <p class="about-text">
-                            Nuestro enfoque combina creatividad, tecnología de vanguardia y metodologías ágiles para entregar 
-                            proyectos excepcionales que superan las expectativas de nuestros clientes.
+                            Nuestro compromiso es entregar productos de alta calidad que no solo 
+                            cumplan con los requerimientos tecnicos, sino que generen un impacto 
+                            real en la productividad y competitividad de nuestros clientes.
                         </p>
-                        
-                        <div class="about-features">
-                            <div class="about-feature">
-                                <div class="feature-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <polyline points="20 6 9 17 4 12"></polyline>
-                                    </svg>
-                                </div>
-                                <span>Metodologías Ágiles</span>
+
+                        <div class="achievements-grid">
+                            <div class="achievement">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                </svg>
+                                <span>Mas de 10 anos en el mercado colombiano</span>
                             </div>
-                            <div class="about-feature">
-                                <div class="feature-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <polyline points="20 6 9 17 4 12"></polyline>
-                                    </svg>
-                                </div>
-                                <span>Soporte 24/7</span>
+                            <div class="achievement">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                </svg>
+                                <span>Equipo multidisciplinario de expertos</span>
                             </div>
-                            <div class="about-feature">
-                                <div class="feature-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <polyline points="20 6 9 17 4 12"></polyline>
-                                    </svg>
-                                </div>
-                                <span>Código Limpio</span>
+                            <div class="achievement">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                </svg>
+                                <span>Clientes en diversos sectores industriales</span>
                             </div>
-                            <div class="about-feature">
-                                <div class="feature-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <polyline points="20 6 9 17 4 12"></polyline>
-                                    </svg>
-                                </div>
-                                <span>Entregas a Tiempo</span>
+                            <div class="achievement">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                </svg>
+                                <span>Soporte tecnico especializado 24/7</span>
+                            </div>
+                            <div class="achievement">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                </svg>
+                                <span>Alianzas estrategicas con lideres tecnologicos</span>
+                            </div>
+                            <div class="achievement">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                </svg>
+                                <span>Certificaciones en metodologias agiles</span>
                             </div>
                         </div>
-
-                        <a href="#contacto" class="btn btn-primary">Conocer Más</a>
                     </div>
 
-                    <div class="about-image">
-                        <div class="about-image-wrapper">
-                            <div class="about-image-bg"></div>
-                            <div class="about-image-content">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
-                                    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                                    <polyline points="2 17 12 22 22 17"></polyline>
-                                    <polyline points="2 12 12 17 22 12"></polyline>
+                    <div class="about-features">
+                        <div class="feature-card glass-card">
+                            <div class="feature-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <line x1="22" y1="12" x2="18" y2="12"></line>
+                                    <line x1="6" y1="12" x2="2" y2="12"></line>
+                                    <line x1="12" y1="6" x2="12" y2="2"></line>
+                                    <line x1="12" y1="22" x2="12" y2="18"></line>
                                 </svg>
                             </div>
+                            <h3>Enfoque Estrategico</h3>
+                            <p>Cada proyecto es abordado con una vision estrategica que alinea la tecnologia con tus objetivos de negocio.</p>
+                        </div>
+                        <div class="feature-card glass-card">
+                            <div class="feature-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                </svg>
+                            </div>
+                            <h3>Equipo Experto</h3>
+                            <p>Profesionales altamente capacitados en las tecnologias mas demandadas del mercado.</p>
+                        </div>
+                        <div class="feature-card glass-card">
+                            <div class="feature-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                                </svg>
+                            </div>
+                            <h3>Metodologia Agil</h3>
+                            <p>Implementamos Scrum y metodologias agiles para entregas rapidas y resultados medibles.</p>
+                        </div>
+                        <div class="feature-card glass-card">
+                            <div class="feature-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="8" r="7"></circle>
+                                    <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                                </svg>
+                            </div>
+                            <h3>Calidad Garantizada</h3>
+                            <p>Procesos de QA rigurosos que aseguran productos robustos y confiables.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Clients Section -->
-        <section class="clients" id="clientes">
+        <!-- Stats Section -->
+        <section class="stats section-reveal">
+            <div class="stats-bg"></div>
             <div class="container">
                 <div class="section-header">
-                    <span class="section-badge">Nuestros Clientes</span>
-                    <h2 class="section-title">Lo Que Dicen Nuestros Clientes</h2>
-                    <p class="section-description">
-                        Descubre por qué empresas de diversos sectores confían en nosotros para sus proyectos digitales.
-                    </p>
+                    <h2 class="section-title">Impacto de <span class="text-gradient">SDW</span> en Colombia</h2>
                 </div>
 
-                <div class="testimonials-grid">
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <div class="stars">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                            </div>
-                            <p class="testimonial-text">
-                                "El equipo de SDW transformó completamente nuestra presencia digital. Su profesionalismo y atención al detalle superaron todas nuestras expectativas."
-                            </p>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
                         </div>
-                        <div class="testimonial-author">
-                            <div class="author-avatar">MC</div>
-                            <div class="author-info">
-                                <span class="author-name">María García</span>
-                                <span class="author-role">CEO, TechCorp</span>
-                            </div>
-                        </div>
+                        <div class="stat-value">Colombia</div>
+                        <div class="stat-label">Operamos en todo el pais</div>
                     </div>
-
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <div class="stars">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                            </div>
-                            <p class="testimonial-text">
-                                "Increíble trabajo en nuestra aplicación móvil. El proceso fue fluido y el resultado final es exactamente lo que necesitábamos."
-                            </p>
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
                         </div>
+                        <div class="stat-value" data-target="50">0</div>
+                        <div class="stat-label">Clientes satisfechos</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="16 18 22 12 16 6"></polyline>
+                                <polyline points="8 6 2 12 8 18"></polyline>
+                            </svg>
+                        </div>
+                        <div class="stat-value" data-target="200">0</div>
+                        <div class="stat-label">Proyectos desarrollados</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                                <polyline points="10 9 9 9 8 9"></polyline>
+                            </svg>
+                        </div>
+                        <div class="stat-value" data-target="10">0</div>
+                        <div class="stat-label">Anos de experiencia</div>
+                    </div>
+                </div>
+
+                <div class="stats-cta">
+                    <a href="#contacto" class="btn btn-primary btn-lg">
+                        Contactanos
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials section-reveal">
+            <div class="testimonials-bg"></div>
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge glass-card">Testimonios</span>
+                    <h2 class="section-title">Ellos ya <span class="text-gradient">Confiaron</span> en Nosotros</h2>
+                </div>
+
+                <div class="testimonials-slider">
+                    <div class="testimonial-card glass-card active" data-index="0">
+                        <svg class="quote-icon" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V21c0 1 0 1 1 1z"></path>
+                            <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path>
+                        </svg>
+                        <p class="testimonial-text">"SDW transformo completamente nuestra operacion logistica. El sistema que desarrollaron nos permitio reducir tiempos de entrega en un 40% y tener visibilidad total de nuestros procesos."</p>
                         <div class="testimonial-author">
                             <div class="author-avatar">CR</div>
                             <div class="author-info">
-                                <span class="author-name">Carlos Rodríguez</span>
-                                <span class="author-role">CTO, InnovateLab</span>
+                                <h4>Carlos Rodriguez</h4>
+                                <p>Director de Operaciones</p>
+                                <span>LogiCorp Colombia</span>
+                            </div>
+                            <div class="author-rating">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
                             </div>
                         </div>
                     </div>
-
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <div class="stars">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                            </div>
-                            <p class="testimonial-text">
-                                "La mejor inversión que hemos hecho. Nuestro e-commerce aumentó las ventas un 200% después del rediseño."
-                            </p>
-                        </div>
+                    <div class="testimonial-card glass-card" data-index="1">
+                        <svg class="quote-icon" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V21c0 1 0 1 1 1z"></path>
+                            <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path>
+                        </svg>
+                        <p class="testimonial-text">"Excelente equipo de trabajo. Entendieron nuestras necesidades desde el primer dia y entregaron una solucion que supero nuestras expectativas. El soporte post-implementacion ha sido excepcional."</p>
                         <div class="testimonial-author">
-                            <div class="author-avatar">AL</div>
+                            <div class="author-avatar">MF</div>
                             <div class="author-info">
-                                <span class="author-name">Ana López</span>
-                                <span class="author-role">Fundadora, DigitalFirst</span>
+                                <h4>Maria Fernandez</h4>
+                                <p>Gerente General</p>
+                                <span>Distribuidora Nacional</span>
+                            </div>
+                            <div class="author-rating">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
                             </div>
                         </div>
                     </div>
+                    <div class="testimonial-card glass-card" data-index="2">
+                        <svg class="quote-icon" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V21c0 1 0 1 1 1z"></path>
+                            <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path>
+                        </svg>
+                        <p class="testimonial-text">"La calidad del codigo y la documentacion que entrega SDW es impecable. Son verdaderos profesionales en su campo. Hemos trabajado juntos en multiples proyectos."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">AM</div>
+                            <div class="author-info">
+                                <h4>Andres Mejia</h4>
+                                <p>CTO</p>
+                                <span>TechStart SAS</span>
+                            </div>
+                            <div class="author-rating">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card glass-card" data-index="3">
+                        <svg class="quote-icon" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V21c0 1 0 1 1 1z"></path>
+                            <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path>
+                        </svg>
+                        <p class="testimonial-text">"Gracias a SDW pudimos automatizar procesos que antes tomaban dias. Ahora tenemos mas tiempo para enfocarnos en lo estrategico. Altamente recomendados."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">LM</div>
+                            <div class="author-info">
+                                <h4>Laura Martinez</h4>
+                                <p>Directora Administrativa</p>
+                                <span>Grupo Empresarial ABC</span>
+                            </div>
+                            <div class="author-rating">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonials-controls">
+                    <button class="testimonial-btn prev" id="testimonial-prev">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
+                    <div class="testimonials-dots" id="testimonials-dots">
+                        <button class="dot active" data-index="0"></button>
+                        <button class="dot" data-index="1"></button>
+                        <button class="dot" data-index="2"></button>
+                        <button class="dot" data-index="3"></button>
+                    </div>
+                    <button class="testimonial-btn next" id="testimonial-next">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
                 </div>
             </div>
         </section>
 
         <!-- CTA Section -->
-        <section class="cta-section">
+        <section class="cta-section section-reveal">
+            <div class="cta-bg"></div>
+            <div class="cta-overlay"></div>
             <div class="container">
                 <div class="cta-content">
-                    <h2 class="cta-title">¿Listo para Transformar tu Negocio?</h2>
-                    <p class="cta-description">
-                        Contáctanos hoy y descubre cómo podemos ayudarte a alcanzar tus objetivos digitales.
-                    </p>
+                    <div class="cta-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 3l1.8 5.2h5.5l-4.5 3.3 1.7 5.3-4.5-3.3-4.5 3.3 1.7-5.3-4.5-3.3h5.5z"></path>
+                        </svg>
+                        <span>Transformacion Digital</span>
+                    </div>
+                    <h2>Listo para llevar tu empresa al siguiente nivel?</h2>
+                    <p>Descubre como SDW puede transformar tus procesos empresariales con soluciones tecnologicas innovadoras y personalizadas.</p>
                     <div class="cta-buttons">
                         <a href="#contacto" class="btn btn-white btn-lg">
-                            Comenzar Ahora
+                            Agenda tu Reunion Gratis
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <line x1="5" y1="12" x2="19" y2="12"></line>
                                 <polyline points="12 5 19 12 12 19"></polyline>
                             </svg>
                         </a>
-                        <a href="https://wa.me/573334010363?text=Hola,%20quiero%20más%20información%20sobre%20sus%20servicios%20tecnológicos%20y%20desarrollo%20de%20software." target="_blank" class="btn btn-outline-white btn-lg">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                            </svg>
-                            WhatsApp
-                        </a>
+                        <a href="#" class="btn btn-outline-white btn-lg">Conoce nuestros casos de exito</a>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- FAQ Section -->
-        <section class="faq" id="faq">
+        <section id="faq" class="faq section-reveal">
+            <div class="faq-bg"></div>
             <div class="container">
                 <div class="section-header">
-                    <span class="section-badge">FAQ</span>
-                    <h2 class="section-title">Preguntas Frecuentes</h2>
-                    <p class="section-description">
-                        Encuentra respuestas a las preguntas más comunes sobre nuestros servicios.
-                    </p>
+                    <span class="section-badge glass-card">Preguntas Frecuentes</span>
+                    <h2 class="section-title">Resolvemos tus <span class="text-gradient">Dudas</span></h2>
                 </div>
 
                 <div class="faq-list">
-                    <div class="faq-item">
+                    <div class="faq-item glass-card">
                         <button class="faq-question">
-                            <span>¿Cuánto tiempo toma desarrollar un proyecto?</span>
+                            <span>Que es SDW y como ayuda a mi empresa?</span>
                             <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <polyline points="6 9 12 15 18 9"></polyline>
                             </svg>
                         </button>
                         <div class="faq-answer">
-                            <p>El tiempo de desarrollo varía según la complejidad del proyecto. Un sitio web básico puede tomar 2-4 semanas, mientras que aplicaciones más complejas pueden requerir 2-6 meses. Durante la consulta inicial, proporcionamos un cronograma detallado.</p>
+                            <p>SDW es una empresa de desarrollo de software especializada en crear sistemas de informacion a la medida. Ayudamos a las empresas a optimizar su logistica y procesos mediante soluciones tecnologicas personalizadas que se adaptan a sus necesidades especificas, desde ERPs hasta aplicaciones moviles y sistemas de automatizacion.</p>
                         </div>
                     </div>
+                    <div class="faq-item glass-card">
+                        <button class="faq-question">
+                            <span>Cual es el tiempo y costo de desarrollo de un proyecto?</span>
+                            <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>El tiempo y costo varian segun la complejidad del proyecto. Proyectos simples pueden tomar de 4 a 8 semanas, mientras que sistemas mas complejos pueden requerir de 3 a 6 meses. Ofrecemos una cotizacion gratuita y detallada despues de entender tus necesidades en una reunion inicial sin compromiso.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item glass-card">
+                        <button class="faq-question">
+                            <span>Que tecnologias utilizan para el desarrollo?</span>
+                            <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Trabajamos con un stack tecnologico moderno y robusto: C#/.NET para backend, React/Angular/Next.js para frontend, MySQL/PostgreSQL/SQL Server para bases de datos, y AWS/Azure para infraestructura cloud. Elegimos las tecnologias mas adecuadas segun los requerimientos de cada proyecto.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item glass-card">
+                        <button class="faq-question">
+                            <span>Ofrecen soporte y mantenimiento despues de la entrega?</span>
+                            <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Si, ofrecemos planes de soporte y mantenimiento continuo. Esto incluye actualizaciones de seguridad, optimizaciones de rendimiento, resolucion de incidentes y mejoras evolutivas. Nuestro equipo esta disponible para asegurar que tu sistema funcione de manera optima.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item glass-card">
+                        <button class="faq-question">
+                            <span>Pueden integrar el nuevo sistema con mis herramientas actuales?</span>
+                            <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Absolutamente. Una de nuestras especialidades es la integracion de sistemas. Podemos conectar tu nuevo software con ERPs, CRMs, sistemas de contabilidad, plataformas de e-commerce y cualquier otra herramienta que utilices actualmente mediante APIs y conectores personalizados.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item glass-card">
+                        <button class="faq-question">
+                            <span>Como es el proceso de desarrollo de un proyecto?</span>
+                            <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Seguimos una metodologia agil: 1) Reunion de descubrimiento para entender tus necesidades, 2) Propuesta tecnica y comercial, 3) Diseno y prototipado, 4) Desarrollo iterativo con entregas parciales, 5) Pruebas y ajustes, 6) Implementacion y capacitacion, 7) Soporte post-lanzamiento. Mantemos comunicacion constante durante todo el proceso.</p>
+                        </div>
+                    </div>
+                </div>
 
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            <span>¿Qué tecnologías utilizan?</span>
-                            <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                        </button>
-                        <div class="faq-answer">
-                            <p>Trabajamos con las tecnologías más modernas y demandadas: React, Next.js, Node.js, Python, TypeScript, AWS, y más. Seleccionamos la mejor tecnología según las necesidades específicas de cada proyecto.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            <span>¿Ofrecen mantenimiento después del lanzamiento?</span>
-                            <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                        </button>
-                        <div class="faq-answer">
-                            <p>Sí, ofrecemos planes de mantenimiento y soporte continuo. Esto incluye actualizaciones de seguridad, corrección de errores, mejoras de rendimiento y soporte técnico. Los planes varían según las necesidades del cliente.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            <span>¿Cómo es el proceso de trabajo?</span>
-                            <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                        </button>
-                        <div class="faq-answer">
-                            <p>Nuestro proceso incluye: 1) Consulta inicial y análisis de requerimientos, 2) Propuesta y planificación, 3) Diseño y prototipado, 4) Desarrollo iterativo, 5) Pruebas y QA, 6) Lanzamiento y 7) Soporte post-lanzamiento.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            <span>¿Cuáles son las formas de pago?</span>
-                            <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                        </button>
-                        <div class="faq-answer">
-                            <p>Aceptamos transferencias bancarias, tarjetas de crédito y pagos en criptomonedas. Generalmente trabajamos con un pago inicial del 50% y el resto al completar el proyecto. Para proyectos grandes, podemos establecer hitos de pago.</p>
-                        </div>
-                    </div>
+                <div class="faq-cta">
+                    <p>Tienes mas preguntas? Estamos aqui para ayudarte.</p>
+                    <a href="#contacto" class="btn btn-primary btn-lg">
+                        Contactanos
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
                 </div>
             </div>
         </section>
 
         <!-- Contact Section -->
-        <section class="contact" id="contacto">
+        <section id="contacto" class="contact section-reveal">
+            <div class="contact-glow"></div>
             <div class="container">
+                <div class="section-header">
+                    <span class="section-badge glass-card">Contacto</span>
+                    <h2 class="section-title">Crea un lugar de trabajo <span class="text-gradient">mas eficiente</span></h2>
+                    <p class="section-description">
+                        Estamos listos para ayudarte a transformar tu empresa con soluciones 
+                        tecnologicas innovadoras.
+                    </p>
+                </div>
+
                 <div class="contact-grid">
-                    <div class="contact-info">
-                        <span class="section-badge">Contacto</span>
-                        <h2 class="section-title">Hablemos de tu Proyecto</h2>
-                        <p class="contact-description">
-                            Estamos listos para convertir tu visión en realidad. Completa el formulario o contáctanos directamente.
-                        </p>
+                    <div class="contact-info glass-card">
+                        <h3>Informacion de Contacto</h3>
+                        <p>Nuestro equipo esta disponible para discutir tus necesidades y crear una solucion personalizada.</p>
 
                         <div class="contact-methods">
-                            <div class="contact-method">
+                            <a href="mailto:info@sdw.com.co" class="contact-method">
                                 <div class="contact-method-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                         <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                                         <polyline points="22,6 12,13 2,6"></polyline>
                                     </svg>
                                 </div>
-                                <div class="contact-method-info">
+                                <div>
                                     <span class="contact-method-label">Email</span>
-                                    <a href="mailto:info@sdw.com.co" class="contact-method-value">info@sdw.com.co</a>
+                                    <span class="contact-method-value">info@sdw.com.co</span>
                                 </div>
-                            </div>
-
-                            <div class="contact-method">
+                            </a>
+                            <a href="https://wa.me/573334010363?text=Hola,%20quiero%20más%20información%20sobre%20sus%20servicios%20tecnológicos%20y%20desarrollo%20de%20software." target="_blank" class="contact-method">
                                 <div class="contact-method-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                         <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
                                     </svg>
                                 </div>
-                                <div class="contact-method-info">
-                                    <span class="contact-method-label">Teléfono</span>
-                                    <a href="https://wa.me/573334010363?text=Hola,%20quiero%20más%20información%20sobre%20sus%20servicios%20tecnológicos%20y%20desarrollo%20de%20software." target="_blank" class="contact-method-value">+57 (333) 401 0363</a>
+                                <div>
+                                    <span class="contact-method-label">Telefono</span>
+                                    <span class="contact-method-value">+57 (333) 401 0363</span>
                                 </div>
-                            </div>
-
+                            </a>
                             <div class="contact-method">
                                 <div class="contact-method-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                         <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                                         <circle cx="12" cy="10" r="3"></circle>
                                     </svg>
                                 </div>
-                                <div class="contact-method-info">
-                                    <span class="contact-method-label">Ubicación</span>
+                                <div>
+                                    <span class="contact-method-label">Ubicacion</span>
                                     <span class="contact-method-value">Colombia</span>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="social-links">
-                            <a href="#" class="social-link" aria-label="LinkedIn">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        <div class="contact-buttons">
+                            <a href="#" class="btn btn-primary btn-block">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                                    <line x1="3" y1="10" x2="21" y2="10"></line>
                                 </svg>
+                                Agendar Reunion
                             </a>
-                            <a href="#" class="social-link" aria-label="Twitter">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                            <a href="https://wa.me/573334010363?text=Hola,%20quiero%20más%20información%20sobre%20sus%20servicios%20tecnológicos%20y%20desarrollo%20de%20software." target="_blank" class="btn btn-outline btn-block">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
                                 </svg>
-                            </a>
-                            <a href="#" class="social-link" aria-label="Instagram">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                                </svg>
-                            </a>
-                            <a href="#" class="social-link" aria-label="GitHub">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
+                                WhatsApp
                             </a>
                         </div>
                     </div>
 
-                    <div class="contact-form-wrapper">
-                        <form class="contact-form" id="contact-form">
-                            <div class="form-group">
-                                <label for="name" class="form-label">Nombre</label>
-                                <input type="text" id="name" name="name" class="form-input" placeholder="Tu nombre" required>
+                    <div class="contact-form-wrapper glass-card">
+                        <h3>Enviar Mensaje</h3>
+                        <form id="contact-form" class="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Nombre completo *</label>
+                                    <input type="text" placeholder="Tu nombre" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Email *</label>
+                                    <input type="email" placeholder="tu@email.com" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Telefono</label>
+                                    <input type="tel" placeholder="+57 300 123 4567">
+                                </div>
+                                <div class="form-group">
+                                    <label>Empresa</label>
+                                    <input type="text" placeholder="Nombre de tu empresa">
+                                </div>
                             </div>
                             <div class="form-group">
-                                <label for="email" class="form-label">Email</label>
-                                <input type="email" id="email" name="email" class="form-input" placeholder="tu@email.com" required>
+                                <label>Mensaje *</label>
+                                <textarea rows="5" placeholder="Cuentanos sobre tu proyecto..." required></textarea>
                             </div>
-                            <div class="form-group">
-                                <label for="subject" class="form-label">Asunto</label>
-                                <input type="text" id="subject" name="subject" class="form-input" placeholder="¿En qué podemos ayudarte?">
-                            </div>
-                            <div class="form-group">
-                                <label for="message" class="form-label">Mensaje</label>
-                                <textarea id="message" name="message" class="form-textarea" placeholder="Cuéntanos sobre tu proyecto..." rows="5" required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary btn-lg btn-full">
+                            <button type="submit" class="btn btn-primary btn-lg btn-block">
                                 Enviar Mensaje
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <line x1="22" y1="2" x2="11" y2="13"></line>
@@ -663,77 +977,119 @@
 
     <!-- Footer -->
     <footer class="footer">
+        <div class="footer-gradient"></div>
+        <div class="footer-line"></div>
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <a href="#" class="logo">
-                        <span class="logo-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                                <polyline points="2 17 12 22 22 17"></polyline>
-                                <polyline points="2 12 12 17 22 12"></polyline>
+                    <div class="footer-logo">
+                        <div class="logo-icon">
+                            <svg viewBox="0 0 40 40" width="32" height="32">
+                                <circle cx="20" cy="12" r="6" fill="currentColor" opacity="0.9"/>
+                                <circle cx="20" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M8 35 L20 20 L32 35" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                                <circle cx="20" cy="20" r="2" fill="currentColor"/>
                             </svg>
-                        </span>
-                        <span class="logo-text">SDW</span>
-                    </a>
-                    <p class="footer-description">
-                        Transformamos ideas en experiencias digitales excepcionales. Tu socio tecnológico de confianza.
-                    </p>
+                        </div>
+                        <div class="logo-text">
+                            <span class="logo-name">SDW</span>
+                            <span class="logo-tagline">Soluciones Tecnologicas SAS</span>
+                        </div>
+                    </div>
+                    <p>Tecnologia que optimiza la logistica y los procesos empresariales. Desarrollamos soluciones a la medida para tu negocio.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn" class="social-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Twitter" class="social-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Instagram" class="social-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="GitHub" class="social-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
 
-                <div class="footer-links">
-                    <h4 class="footer-title">Enlaces</h4>
-                    <nav class="footer-nav">
-                        <a href="#inicio">Inicio</a>
-                        <a href="#servicios">Servicios</a>
-                        <a href="#nosotros">Nosotros</a>
-                        <a href="#contacto">Contacto</a>
-                    </nav>
+                <div class="footer-links-col">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="#">Desarrollo Web</a></li>
+                        <li><a href="#">Apps Moviles</a></li>
+                        <li><a href="#">Sistemas ERP</a></li>
+                        <li><a href="#">Business Intelligence</a></li>
+                        <li><a href="#">Automatizacion</a></li>
+                    </ul>
                 </div>
 
-                <div class="footer-links">
-                    <h4 class="footer-title">Servicios</h4>
-                    <nav class="footer-nav">
-                        <a href="#servicios">Desarrollo Web</a>
-                        <a href="#servicios">Apps Móviles</a>
-                        <a href="#servicios">UI/UX Design</a>
-                        <a href="#servicios">Backend & APIs</a>
-                    </nav>
+                <div class="footer-links-col">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#">Equipo</a></li>
+                        <li><a href="#">Carreras</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
                 </div>
 
-                <div class="footer-links">
-                    <h4 class="footer-title">Contacto</h4>
-                    <nav class="footer-nav">
-                        <a href="mailto:info@sdw.com.co">info@sdw.com.co</a>
-                        <a href="https://wa.me/573334010363?text=Hola,%20quiero%20más%20información%20sobre%20sus%20servicios%20tecnológicos%20y%20desarrollo%20de%20software." target="_blank">+57 (333) 401 0363</a>
-                        <span>Colombia</span>
-                    </nav>
+                <div class="footer-links-col">
+                    <h4>Recursos</h4>
+                    <ul>
+                        <li><a href="#">Documentacion</a></li>
+                        <li><a href="#">Casos de Exito</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#">Soporte</a></li>
+                        <li><a href="#">Politica de Privacidad</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links-col">
+                    <h4>Contacto</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <a href="mailto:info@sdw.com.co">info@sdw.com.co</a>
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            <a href="https://wa.me/573334010363?text=Hola,%20quiero%20más%20información%20sobre%20sus%20servicios%20tecnológicos%20y%20desarrollo%20de%20software." target="_blank">+57 (333) 401 0363</a>
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span>Colombia</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p class="copyright">&copy; 2024 SDW Soluciones Tecnologicas SAS. Todos los derechos reservados.</p>
-                <div class="footer-social">
-                    <a href="#" class="social-link" aria-label="LinkedIn">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                        </svg>
-                    </a>
-                    <a href="#" class="social-link" aria-label="Twitter">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                        </svg>
-                    </a>
-                    <a href="#" class="social-link" aria-label="Instagram">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                        </svg>
-                    </a>
-                    <a href="#" class="social-link" aria-label="GitHub">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                        </svg>
-                    </a>
+                <p class="copyright">2024 SDW Soluciones Tecnologicas SAS. Todos los derechos reservados.</p>
+                <div class="footer-legal">
+                    <a href="#">Terminos y Condiciones</a>
+                    <a href="#">Politica de Privacidad</a>
                 </div>
             </div>
         </div>
