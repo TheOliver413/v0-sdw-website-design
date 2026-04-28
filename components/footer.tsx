@@ -60,7 +60,7 @@ export function Footer() {
               </div>
               <div>
                 <span className="text-xl font-bold text-foreground">SDW</span>
-                <p className="text-xs text-muted-foreground">Soluciones Tecnologicas</p>
+                <p className="text-xs text-muted-foreground">Soluciones Tecnologicas SAS</p>
               </div>
             </div>
             
@@ -157,15 +157,22 @@ export function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <Mail className="w-5 h-5 text-primary mt-0.5" />
-                <span className="text-sm text-muted-foreground">contacto@sdw.com.co</span>
+                <span className="text-sm text-muted-foreground">info@sdw.com.co</span>
               </li>
               <li className="flex items-start gap-3">
                 <Phone className="w-5 h-5 text-primary mt-0.5" />
-                <span className="text-sm text-muted-foreground">+57 (1) 234 5678</span>
+                <a 
+                  href="https://wa.me/573334010363?text=Hola,%20quiero%20más%20información%20sobre%20sus%20servicios%20tecnológicos%20y%20desarrollo%20de%20software."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  +57 (333) 401 0363
+                </a>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary mt-0.5" />
-                <span className="text-sm text-muted-foreground">Bogota, Colombia</span>
+                <span className="text-sm text-muted-foreground">Colombia</span>
               </li>
             </ul>
           </motion.div>
@@ -174,7 +181,7 @@ export function Footer() {
         <div className="border-t border-border pt-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-sm text-muted-foreground">
-              2024 SDW Soluciones Tecnologicas. Todos los derechos reservados.
+              2024 SDW Soluciones Tecnologicas SAS. Todos los derechos reservados.
             </p>
             <div className="flex gap-6">
               <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">

@@ -14,6 +14,11 @@ export function ParticlesBackground() {
 
     let animationFrameId: number
     let particles: Particle[] = []
+    let mouseX = 0
+    let mouseY = 0
+
+    // Check for reduced motion preference
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
     const resizeCanvas = () => {
       canvas.width = window.innerWidth
@@ -23,50 +28,67 @@ export function ParticlesBackground() {
     class Particle {
       x: number
       y: number
-      size: number
-      speedX: number
-      speedY: number
+      vx: number
+      vy: number
+      radius: number
       opacity: number
-      color: string
 
       constructor() {
         this.x = Math.random() * (canvas?.width || window.innerWidth)
         this.y = Math.random() * (canvas?.height || window.innerHeight)
-        this.size = Math.random() * 2 + 0.5
-        this.speedX = (Math.random() - 0.5) * 0.5
-        this.speedY = (Math.random() - 0.5) * 0.5
+        this.vx = (Math.random() - 0.5) * 0.4
+        this.vy = (Math.random() - 0.5) * 0.4
+        this.radius = Math.max(1, Math.random() * 2.5 + 0.5)
         this.opacity = Math.random() * 0.5 + 0.2
-        const colors = ["#a855f7", "#6366f1", "#06b6d4", "#8b5cf6"]
-        this.color = colors[Math.floor(Math.random() * colors.length)]
+      }
+
+      reset() {
+        this.x = Math.random() * (canvas?.width || window.innerWidth)
+        this.y = Math.random() * (canvas?.height || window.innerHeight)
+        this.vx = (Math.random() - 0.5) * 0.4
+        this.vy = (Math.random() - 0.5) * 0.4
+        this.radius = Math.max(1, Math.random() * 2.5 + 0.5)
+        this.opacity = Math.random() * 0.5 + 0.2
       }
 
       update() {
-        this.x += this.speedX
-        this.y += this.speedY
+        this.x += this.vx
+        this.y += this.vy
 
+        // Bounce off edges
         if (canvas) {
-          if (this.x > canvas.width) this.x = 0
-          if (this.x < 0) this.x = canvas.width
-          if (this.y > canvas.height) this.y = 0
-          if (this.y < 0) this.y = canvas.height
+          if (this.x < 0 || this.x > canvas.width) this.vx *= -1
+          if (this.y < 0 || this.y > canvas.height) this.vy *= -1
+        }
+
+        // Mouse interaction - gentle repulsion
+        const dx = mouseX - this.x
+        const dy = mouseY - this.y
+        const dist = Math.sqrt(dx * dx + dy * dy)
+
+        if (dist < 120 && dist > 0) {
+          const force = (120 - dist) / 120
+          this.x -= (dx / dist) * force * 0.5
+          this.y -= (dy / dist) * force * 0.5
         }
       }
 
       draw() {
         if (!ctx) return
+        const safeRadius = Math.max(0.5, this.radius)
         ctx.beginPath()
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2)
-        ctx.fillStyle = this.color
-        ctx.globalAlpha = this.opacity
+        ctx.arc(this.x, this.y, safeRadius, 0, Math.PI * 2)
+        ctx.fillStyle = `rgba(192, 132, 252, ${this.opacity})`
         ctx.fill()
-        ctx.globalAlpha = 1
       }
     }
 
     const init = () => {
       particles = []
-      const particleCount = Math.min((canvas.width * canvas.height) / 15000, 100)
-      for (let i = 0; i < particleCount; i++) {
+      if (!canvas) return
+      const area = canvas.width * canvas.height
+      const numParticles = Math.min(100, Math.max(30, Math.floor(area / 12000)))
+      for (let i = 0; i < numParticles; i++) {
         particles.push(new Particle())
       }
     }
@@ -77,14 +99,15 @@ export function ParticlesBackground() {
         for (let j = i + 1; j < particles.length; j++) {
           const dx = particles[i].x - particles[j].x
           const dy = particles[i].y - particles[j].y
-          const distance = Math.sqrt(dx * dx + dy * dy)
+          const dist = Math.sqrt(dx * dx + dy * dy)
 
-          if (distance < 150) {
+          if (dist < 140) {
             ctx.beginPath()
-            ctx.strokeStyle = `rgba(139, 92, 246, ${0.1 * (1 - distance / 150)})`
-            ctx.lineWidth = 0.5
             ctx.moveTo(particles[i].x, particles[i].y)
             ctx.lineTo(particles[j].x, particles[j].y)
+            const opacity = ((1 - dist / 140) * 0.25).toFixed(2)
+            ctx.strokeStyle = `rgba(124, 58, 237, ${opacity})`
+            ctx.lineWidth = 1
             ctx.stroke()
           }
         }
@@ -104,26 +127,48 @@ export function ParticlesBackground() {
       animationFrameId = requestAnimationFrame(animate)
     }
 
+    // Mouse tracking
+    const handleMouseMove = (e: MouseEvent) => {
+      mouseX = e.clientX
+      mouseY = e.clientY
+    }
+
+    const handleTouchMove = (e: TouchEvent) => {
+      if (e.touches.length > 0) {
+        mouseX = e.touches[0].clientX
+        mouseY = e.touches[0].clientY
+      }
+    }
+
     resizeCanvas()
     init()
-    animate()
+    
+    // Only animate if user doesn't prefer reduced motion
+    if (!prefersReducedMotion) {
+      animate()
+    }
 
     window.addEventListener("resize", () => {
       resizeCanvas()
       init()
     })
+    
+    document.addEventListener("mousemove", handleMouseMove)
+    document.addEventListener("touchmove", handleTouchMove)
 
     return () => {
       cancelAnimationFrame(animationFrameId)
       window.removeEventListener("resize", resizeCanvas)
+      document.removeEventListener("mousemove", handleMouseMove)
+      document.removeEventListener("touchmove", handleTouchMove)
     }
   }, [])
 
   return (
     <canvas
       ref={canvasRef}
-      className="absolute inset-0 pointer-events-none"
-      style={{ opacity: 0.6 }}
+      className="fixed inset-0 pointer-events-none z-[1]"
+      aria-hidden="true"
     />
   )
 }

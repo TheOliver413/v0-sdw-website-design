@@ -11,19 +11,19 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "contacto@sdw.com.co",
-    href: "mailto:contacto@sdw.com.co",
+    value: "info@sdw.com.co",
+    href: "mailto:info@sdw.com.co",
   },
   {
     icon: Phone,
     label: "Telefono",
-    value: "+57 (1) 234 5678",
-    href: "tel:+5712345678",
+    value: "+57 (333) 401 0363",
+    href: "https://wa.me/573334010363?text=Hola,%20quiero%20más%20información%20sobre%20sus%20servicios%20tecnológicos%20y%20desarrollo%20de%20software.",
   },
   {
     icon: MapPin,
     label: "Ubicacion",
-    value: "Bogota, Colombia",
+    value: "Colombia",
     href: "#",
   },
 ]
