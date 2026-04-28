@@ -36,14 +36,22 @@ class ParticlesBackground {
         }
     }
     
+    getParticleColor() {
+        // Get CSS variable for particle color based on theme
+        const style = getComputedStyle(document.documentElement);
+        return style.getPropertyValue('--particles-color').trim() || '99, 102, 241';
+    }
+    
     drawParticle(particle) {
+        const color = this.getParticleColor();
         this.ctx.beginPath();
         this.ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        this.ctx.fillStyle = `rgba(99, 102, 241, ${particle.opacity})`;
+        this.ctx.fillStyle = `rgba(${color}, ${particle.opacity})`;
         this.ctx.fill();
     }
     
     connectParticles() {
+        const color = this.getParticleColor();
         for (let i = 0; i < this.particles.length; i++) {
             for (let j = i + 1; j < this.particles.length; j++) {
                 const dx = this.particles[i].x - this.particles[j].x;
@@ -53,7 +61,7 @@ class ParticlesBackground {
                 if (distance < 150) {
                     const opacity = (1 - distance / 150) * 0.3;
                     this.ctx.beginPath();
-                    this.ctx.strokeStyle = `rgba(99, 102, 241, ${opacity})`;
+                    this.ctx.strokeStyle = `rgba(${color}, ${opacity})`;
                     this.ctx.lineWidth = 1;
                     this.ctx.moveTo(this.particles[i].x, this.particles[i].y);
                     this.ctx.lineTo(this.particles[j].x, this.particles[j].y);
@@ -263,12 +271,67 @@ class HeaderScroll {
         
         window.addEventListener('scroll', () => {
             if (window.scrollY > 100) {
-                this.header.style.background = 'rgba(10, 10, 15, 0.95)';
+                this.header.style.background = 'var(--header-bg-scroll)';
                 this.header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.3)';
             } else {
-                this.header.style.background = 'rgba(10, 10, 15, 0.8)';
+                this.header.style.background = 'var(--header-bg)';
                 this.header.style.boxShadow = 'none';
             }
+        });
+    }
+}
+
+// ===== Theme Toggle =====
+class ThemeToggle {
+    constructor() {
+        this.btn = document.getElementById('theme-toggle');
+        this.init();
+    }
+    
+    init() {
+        if (!this.btn) return;
+        
+        // Check for saved theme preference or default to dark
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'light') {
+            document.body.classList.add('light-mode');
+        }
+        
+        this.btn.addEventListener('click', () => this.toggle());
+    }
+    
+    toggle() {
+        document.body.classList.toggle('light-mode');
+        const isLight = document.body.classList.contains('light-mode');
+        localStorage.setItem('theme', isLight ? 'light' : 'dark');
+    }
+}
+
+// ===== Back to Top Button =====
+class BackToTop {
+    constructor() {
+        this.btn = document.getElementById('back-to-top');
+        this.init();
+    }
+    
+    init() {
+        if (!this.btn) return;
+        
+        // Show/hide button based on scroll position
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                this.btn.classList.add('visible');
+            } else {
+                this.btn.classList.remove('visible');
+            }
+        });
+        
+        // Scroll to top on click
+        this.btn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         });
     }
 }
@@ -335,4 +398,6 @@ document.addEventListener('DOMContentLoaded', () => {
     new HeaderScroll();
     new ContactForm();
     new ScrollReveal();
+    new ThemeToggle();
+    new BackToTop();
 });
